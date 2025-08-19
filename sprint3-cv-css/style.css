@@ -1,0 +1,45 @@
+.text {
+    text-align: center;
+}
+
+h3 {
+    color:rgba(44, 58, 167, 0.849);
+}
+
+.color {
+    color:rgba(44, 58, 167, 0.849); 
+    margin-left: 10%;
+}
+
+.margin {
+    margin-left: 16%;
+}
+
+/* unvisited link */
+a:link {
+  color:rgb(44, 58, 167, 0.849);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(0, 128, 0);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(255, 105, 180);
+}
+
+/* selected link */
+a:active {
+  color: rgb(0, 0, 255);
+}
+
+.margin1 {
+    margin-left: 15%;
+}
+
+.margin2 {
+    width: 100%; margin-left: 15%;
+}
+
