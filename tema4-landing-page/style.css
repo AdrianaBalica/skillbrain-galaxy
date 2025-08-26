@@ -1,0 +1,51 @@
+.nav {
+    height: 80px;
+}
+
+.row {
+    display: flex;
+    flex-direction:row;
+}
+
+.row-centered {
+    align-items: center;
+}
+
+.content-container {
+    max-width: 1120px;
+}
+
+#app-logo {
+    height: 40px;
+    margin-right: 16px;
+}
+
+.app-logo-container {
+    
+}
+
+#app-title {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 28px;
+    color: #173a56;
+
+}
+
+.nav-bar-wrapper {
+    width: 100%;
+   justify-content:space-between ; 
+}
+
+.nav-links-container > a {
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    color: #22343d;
+    margin: 0 10px;
+}
