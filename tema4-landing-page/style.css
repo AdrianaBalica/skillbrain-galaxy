@@ -1,5 +1,7 @@
 .nav {
     height: 80px;
+    justify-content: center;
+    align-items: center;
 }
 
 .row {
@@ -13,15 +15,12 @@
 
 .content-container {
     max-width: 1120px;
+    justify-content: center;
 }
 
 #app-logo {
     height: 40px;
     margin-right: 16px;
-}
-
-.app-logo-container {
-    
 }
 
 #app-title {
@@ -48,4 +47,51 @@
     line-height: 28px;
     color: #22343d;
     margin: 0 10px;
+}
+
+.main-btn {
+    background: #02897a;
+    border-radius: 4px;
+    height: 43px;
+    font-family: Poppins;
+    font-style:normal;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color:#FFFFFF;
+    border: none;
+    cursor: pointer;
+    padding: 0 25px;
+}
+
+.second-btn {
+    background: #FFFFFF;
+    color:#173A56;
+    border: 1px solid#BCD0E5 ;
+}
+
+.buttons-nav {
+    margin: 0 12px;
+}
+
+.frame-btn {
+    height: 32px; 
+    width: 32px;
+    border-radius: 50%;
+    background-color:#f3f3f3;
+    border: none;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items:center
+}
+
+#frame-btn {
+    height: 24px;
+    width: 24px;
+}
+
+.btn-container {
+    justify-content:flex-end;
+    
 }
