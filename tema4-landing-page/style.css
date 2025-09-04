@@ -196,11 +196,24 @@ body > section:last-child {
     overflow: visible;
 }
 
+.section-bg-reverse {
+    background-image: url(./assets/section-bg-reverse.png);
+}
+
 .section-3-row > h2 {
     font-weight: 700;
     font-size: 2em;
     line-height: 48px;
     text-align: center;
+    margin: 20px;
+}
+
+.section-3-row > p {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    width: 60%;
 }
 
 .section-row-4-cols {
@@ -246,6 +259,64 @@ body > section:last-child {
     margin-top: 60px;
     margin-bottom: 30px;
     justify-content: flex-start;
+}
+
+.section-2-col-item {
+    padding: 10px;
+}
+
+.section-2-col-item > h6 {
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 26px;
+    margin: 30px 0 8px 0;
+}    
+
+.section-2-col-item > h2 {
+    margin: 0px;
+}
+
+.check-box-icon {
+    height: 35px;
+    width: 35px;
+    margin-right: 30px;
+}
+
+.avatar-icon {
+    height: 100px;
+    width: 100px;
+}
+
+.chat-box {
+    background-size: contain;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+    overflow: visible;
+}
+
+.chat-box-left {
+    background-image: url(./assets/check-box-left.png);
+    margin-left: 16px;
+}
+
+.chat-box-right {
+    background-image: url(./assets/check-box-right.png);
+    margin-right: 16px;
+}
+
+.chat-box-wrapper-right {
+    flex-direction: row-reverse;
+}
+
+.chat-box-container {
+    width: 100%;
+}
+
+.chat-box > p {
+    padding: 10px;
 }
 
 @media screen and (max-width: 890px) {
@@ -323,6 +394,11 @@ body > section:last-child {
      justify-content: flex-start;
      align-items: center;
    }  
+
+  .section-non-reverse {
+     flex-direction: column;
+   }
+
   .section-2-col-item {
      width: 100%;
      justify-content: flex-start;
@@ -347,5 +423,5 @@ body > section:last-child {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   }
+   } 
 }
