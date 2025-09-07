@@ -6,6 +6,16 @@
     font-weight:normal;
 }
 
+* { 
+    box-sizing: border-box;                                                   
+}
+html, body { 
+    width: 100%; overflow-x: hidden; 
+}
+img, svg, video { 
+    max-width: 100%; height: auto; display: block; 
+}
+
 body {
     margin: 0;
 }
@@ -414,17 +424,18 @@ body > section:last-child {
     background: #02897a;
 }
 
-/* PRICE TABLE */
 .price-table {
     text-align: center;
     margin: 150px auto;
 }
+
 .price-cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     margin-top: 40px;
 }
+
 .price-card {
     background:#FFFFFF;
     border: 1px solid #e0e0e0;
@@ -436,61 +447,67 @@ body > section:last-child {
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
 .price-card.featured {
     background: #02897a;
     color: #fff;
     transform: scale(1.05);
 }
+
 .price-card h3 {
     font-size: 1.5em;
     font-weight: 700;
 }
-.price-card .desc {
+
+.price-card .card-desc {
     margin: 10px 0;
     font-size: 0.9em;
 }
+
 .price-card h1 {
     font-size: 3em;
     margin: 20px 0 10px;
 }
+
 .price-card h1 span {
     font-size: 0.5em;
     vertical-align: super;
 }
+
 .price-card .per {
     margin-bottom: 20px;
     color: #AFAFAF;
 }
+
 .price-card ul {
     list-style: none;
     padding: 0;
     margin: 0 0 20px;
 }
+
 .price-card ul li {
     margin: 10px 0;
 }
 
-/* Primul card – are bordură stânga */
 .price-card:first-child {
-    border-left: 1px solid #e0e0e0;
-    border-radius: 8px 0 0 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
 }
 
-/* Ultimul card – are bordură dreapta */
 .price-card:last-child {
-    border-right: 1px solid #e0e0e0;
-    border-radius: 0 8px 8px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
 }
 
-/* Hover efect */
+
 .price-card:hover {
     background: #02897a;
     color: #fff;
-    transform: translateY(-5px);  /* se ridică un pic */
+    transform: translateY(-5px);  
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-/* Buton din interior */
+
 .price-card button {
     margin-top: 20px;
     padding: 10px 25px;
@@ -503,12 +520,11 @@ body > section:last-child {
     transition: all 0.3s ease;
 }
 
-/* Hover pe card → schimbă butonul */
 .price-card:hover button {
     background: #fff;
     color: #02897a;
 }
-/* CLIENT TESTIMONIALS */
+
 .clients {
     text-align: center;
     margin: 150px auto;
@@ -516,12 +532,14 @@ body > section:last-child {
     justify-content: center;
     align-items: center;
 }
+
 .client-cards {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 40px;
 }
+
 .client-card {
     background: #FFFFFF;
     border: 1px solid #ddd;
@@ -530,87 +548,99 @@ body > section:last-child {
     width: 280px;
     text-align: center;
 }
+
 .client-card .stars {
     font-size: 1.2em;
     color: #F3CD03;
 }
+
 .client-info {
     display: flex;
     align-items: center;
     margin-top: 15px;
 }
+
 .client-info img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
 }
+
 .client-info h5 {
     margin: 0;
     font-size: 1em;
     font-weight: 700;
 }
+
 .client-info span {
     font-size: 0.9em;
     color: #737373;
 }
 
-/* CTA -mai am de lucrat*/
-.cta {
+.cta-box {
     background: #02897a;
     background-size: contain;
     border-radius: 32px;
     padding: 25px;
     max-width: 800px;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    gap: 30px;
-}
-.cta-box {
+    margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items:flex-start;
-   text-align: left;
+    gap: clamp(12px, 2.5vw, 30px);
+    flex-wrap: wrap;     
+    text-align: left;
 }
 
+.cta-text { 
+    flex: 1 1 320px; 
+    min-width: 0;  
+    color: #FFFFFF
+}          
+
 .cta-text h2 {
-    font-size: 2em;
+    font-size: clamp(1.25rem, 2.2vw, 2rem);
     font-weight: 600;
-    margin-bottom: 20px;
-   
+    margin: 0 0 12px 0;
 }
 
 .cta-img {
-    width: 350px;
-    height: 330px;
-    border-radius: 5px;
-    padding: 10px;
-    gap: 10px;
+    flex: 0 1 360px;
+    max-width: 360px;
+    width: 100%;
 }
 
 .cta-img img {
-    max-width: 430px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .main-btn-1 {
     background: #FFFFFF;
+    color:#02897A;
+    border: none;
+    cursor: pointer;
     border-radius: 4px;
     height: 43px;
     font-size: 1em;
     font-weight: 600;
     line-height: 24px;
-    color:#02897A;
-    border: none;
-    cursor: pointer;
-    padding: 0 25px;
-    white-space: pre;
-    margin-top: 50px;
+    padding: 0 20px;
+    margin-top: 12px;
+    white-space: normal;  
+    transition: transform .2s ease-in-out, background .2s ease-in-out;
 }
 
-/* FOOTER */
+.main-btn-1:hover {
+     background: #f0f0f0; 
+     transform: translateY(-2px);
+    }
+
+
 .footer {
-    background: #fff;
+    background: #FFFFFF;
     margin-top: 100px;
     padding: 50px 20px;
     border-top: 1px solid #eee;
@@ -638,6 +668,13 @@ body > section:last-child {
     margin-right: 10px;
 }
 
+.footer-title {
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 28px;
+    color: #173a56;
+}
+
 .social-icons a img {
     width: 24px;
     margin-right: 10px;
@@ -661,7 +698,7 @@ body > section:last-child {
     width: 100%;
     padding: 10px;
     margin: 15px 0;
-    border: 1px solid #ddd;
+    border: 1px solid #BCD0E5;
     border-radius: 4px;
 }
 
@@ -729,6 +766,14 @@ body > section:last-child {
         justify-content: center;
     }
     
+    .cta-text h2 {
+        font-size: 1.6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     .cta-img img {
          max-width: 430px;
     }
@@ -745,6 +790,7 @@ body > section:last-child {
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        margin-top: 50px;
     }
 }
 
@@ -781,11 +827,33 @@ body > section:last-child {
         flex-direction: column;
         align-items: center;
     }
+    
+    .cta-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .cta-text h2 {
+        font-size: 1.6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cta-img {
+        max-width: 100%;
+    }
+
+    .main-btn-1 {
+        margin-top: 10px;
+    }
 
     .main-btn-1 {
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        margin-top: 50px;
     }
 }
 
@@ -830,19 +898,32 @@ body > section:last-child {
         flex-direction: column;
         align-items: center;
     }
+
    .cta {
-        flex-direction: column;   /* textul și imaginea se pun unul sub altul */
+        flex-direction: column;   
         text-align: center;
         padding: 30px 20px;
     }
 
-   .cta-img img {
-        max-width: 430px;
-    }
-
-   .main-btn-1 {
+    .main-btn-1 {
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta {
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .cta-text h2 {
+        font-size: 1.4em;
+    }
+
+    .main-btn-1 {
+        margin-top: 50px;
     }
 }
