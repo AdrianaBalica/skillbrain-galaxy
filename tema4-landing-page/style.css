@@ -346,7 +346,7 @@ body > section:last-child {
 
 .contents-header p {
     font-size: 1em;
-    color: #555;
+    color: #22343D;
     max-width: 600px;
     margin: 0 auto 40px;
     line-height: 26px;
@@ -360,7 +360,7 @@ body > section:last-child {
 }
 
 .content-card {
-    background: #fff;
+    background: #FFFFFF;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -450,7 +450,7 @@ body > section:last-child {
 
 .price-card.featured {
     background: #02897a;
-    color: #fff;
+    color: #FFFFFF;
     transform: scale(1.05);
 }
 
@@ -502,9 +502,9 @@ body > section:last-child {
 
 .price-card:hover {
     background: #02897a;
-    color: #fff;
+    color: #FFFFFF;
     transform: translateY(-5px);  
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -515,13 +515,13 @@ body > section:last-child {
     border-radius: 4px;
     font-weight: 600;
     background: #02897a;
-    color: #fff;
+    color: #FFFFFF;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .price-card:hover button {
-    background: #fff;
+    background: #FFFFFF;
     color: #02897a;
 }
 
@@ -575,7 +575,7 @@ body > section:last-child {
 
 .client-info span {
     font-size: 0.9em;
-    color: #737373;
+    color:#252B42;
 }
 
 .cta-box {
@@ -782,7 +782,7 @@ body > section:last-child {
         background: #02897a;
         border-radius: 20px;
         padding: 40px 30px;
-        color: #fff;
+        color: #FFFFFF;
         width: 100%;
     }
 
