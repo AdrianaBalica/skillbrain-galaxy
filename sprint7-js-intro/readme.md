@@ -43,3 +43,4 @@ Folosind instrucțiunea JavaScript switch se va obține ziua săptămânii
 ### Exemplul 2
 **Input:** 5
 **Output:** "Vineri"
+
