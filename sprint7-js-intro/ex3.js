@@ -1,6 +1,6 @@
-let zi= 1;
+let ziua = 1;
 
-switch(zi){
+switch(ziua){
     case 1:
         console.log("Luni");
         break;
@@ -24,9 +24,9 @@ switch(zi){
         break;
 }
 
-let zi= 5;
+let day = 5;
 
-switch(zi){
+switch(day){
     case 1:
         console.log("Luni");
         break;
