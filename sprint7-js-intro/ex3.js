@@ -1,51 +1,30 @@
-let ziua = 1;
-
-switch(ziua){
-    case 1:
-        console.log("Luni");
-        break;
-    case 2:
-        console.log("Marti");
-        break;
-    case 3:
-        console.log("Miercuri");
-        break;
-    case 4:
-        console.log("Joi");
-        break; 
-    case 5:
-        console.log("Vineri");
-        break;
-    case 6:
-        console.log("Sambata");
-        break;
-    case 7:
-        console.log("Duminica");
-        break;
+function numeZi(ziua) {
+    switch (ziua) {
+      case 1:
+        return "Luni";
+      case 2:
+        return "Marti";
+      case 3:
+        return "Miercuri";
+      case 4:
+        return "Joi";
+      case 5:
+        return "Vineri";
+      case 6:
+        return "Sambata";
+      case 7:
+        return "Duminica";
+      default:
+        throw new Error("Zi invalida! Trebuie sa fie intre 1 si 7.");
+    }
 }
-
-let day = 5;
-
-switch(day){
-    case 1:
-        console.log("Luni");
-        break;
-    case 2:
-        console.log("Marti");
-        break;
-    case 3:
-        console.log("Miercuri");
-        break;
-    case 4:
-        console.log("Joi");
-        break; 
-    case 5:
-        console.log("Vineri");
-        break;
-    case 6:
-        console.log("Sambata");
-        break;
-    case 7:
-        console.log("Duminica");
-        break;
+  
+ 
+  try {
+    console.log(numeZi(1)); 
+    console.log(numeZi(5)); 
+    console.log(numeZi(9)); 
+} catch (e) {
+    console.error("Eroare prinsa:", e.message);
 }
+  
