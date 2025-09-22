@@ -5,6 +5,7 @@ function tellFortune(x, y, z, n) {
 const x="Programator";
 const y="Italia";
 const z="Emanuel";
-const n="3";
+const n= 3;
 
 console.log(tellFortune(x, y, z, n));
+console.log(tellFortune("Programator","Italia", "Emanuel", 3));
