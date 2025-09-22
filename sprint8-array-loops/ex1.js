@@ -1,13 +1,15 @@
-function nrPare() {
+function getNrPare(n) {
     let i = 0;
-    let numere = [];
+    let rezultat = [];
 
-    while (i<=10) {
-        numere.push (i);
+    while (i <= n) {
+        rezultat.push(i);
         i += 2;
     }
 
-    return numere;
+    return rezultat;
 }
 
-console.log (nrPare(10));
+console.log("Numerele pare până la 10: " + getNrPare(10).join(", "));
+console.log("Numerele pare până la 15: " + getNrPare(15).join(", "));
+console.log("Numerele pare până la 20: " + getNrPare(20).join(", "));

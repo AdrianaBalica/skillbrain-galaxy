@@ -1,4 +1,7 @@
-const text = "Acesta este un string de test";
-
-const vocale = ([...text].filter(c => "aeiouAeiou".includes(c))).length;
-console.log(vocale);
+const numaraVocale = (text) => {
+    const listaVocale = "aeiouAEIOU";
+    return [...text].filter(c => listaVocale.includes(c)).length;
+};
+  
+console.log("Numarul vocalelor este " + numaraVocale("Acesta este un string de test"));
+console.log("Numarul vocalelor este " + numaraVocale("ELIZA ESTE MEDIC"));
