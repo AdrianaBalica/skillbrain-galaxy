@@ -23,10 +23,10 @@ function getNumeZi(ziua) {
   
  
 try {
-    console.log(getNumeZi(0));
-    console.log(getNumeZi(1)); 
-    console.log(getNumeZi(5)); 
-    console.log(getNumeZi(9)); 
+    console.log("Ziua 0 este: " + getNumeZi(0));
+    console.log("Ziua 1 este: " +getNumeZi(1)); 
+    console.log("Ziua 5 este: " +getNumeZi(5)); 
+    console.log("Ziua 9 este: " +getNumeZi(9)); 
 } catch (e) {
     console.error("Eroare prinsa:", e.message);
 }
