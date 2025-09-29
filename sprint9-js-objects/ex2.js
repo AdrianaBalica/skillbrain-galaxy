@@ -1,12 +1,11 @@
-function getParameters(a, b) {
-    return {
-        a: a,
-        b: b,
-    };
+function getNewObjectWithoutProperty(obiect, proprietate) {
+    const obiectNou = { ...obiect };   
+    delete obiectNou[proprietate]; 
+    return obiectNou;             
 }
 
-const parameters = getParameters(1, 2);
+const obiect = { a: 1, b: 2 };
+const rezultat =  getNewObjectWithoutProperty(obiect, "b");
 
-delete parameters.b;
-
-console.log("Rezultatul este ", parameters);
+console.log("Obiect inițial:", obiect);   
+console.log("Obiect nou:", rezultat);     
