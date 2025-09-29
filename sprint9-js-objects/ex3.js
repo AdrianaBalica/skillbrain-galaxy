@@ -13,7 +13,7 @@ const carti = [
 
 function afiseazaCarti(carti) {
     for (let i = 0; i < carti.length; i++) {
-        const carte = carti [i];
+        const carte = carti[i];
 
         console.log(`${carte.titlu}" de ${carte.autor}`);
 
