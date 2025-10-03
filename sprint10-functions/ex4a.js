@@ -1,6 +1,4 @@
-function addNumber(...numere) {
-    return numere.reduce((total, numar) => total + numar, 0);
-}
+const addNumber = (...numere) => numere.reduce((total, numar) => total + numar, 0);
 
 console.log("Suma numerelor este ", addNumber(1, 2, 3));
 console.log("Suma numerelor este ", addNumber(1, 2, 3, 4, 5));
