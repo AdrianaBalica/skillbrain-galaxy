@@ -1,5 +1,5 @@
 function madeRecipe(titlu, portii, ingrediente) {
-        return { titlu, portii, ingrediente };
+        return { titlu, portii, ingrediente: [...ingrediente] };
     }
 
 const pizza = madeRecipe("Pizza", 3, ["sunca", "cas", "ketchup"]);
