@@ -40,7 +40,9 @@ const onBtnNewAdviceClick = () => {
 
 const onBtnVoiceClick = () => {
     const text = document.getElementById("advice-text").textContent.trim();
-    if (!text) return;
+    if (!text) {
+        return;
+    }
 
     speak(text);
 };
