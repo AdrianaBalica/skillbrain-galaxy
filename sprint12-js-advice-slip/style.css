@@ -1,0 +1,110 @@
+:root {
+    --dark-bg: #1f2632;
+    --card-bg: #323a49;
+    --neon-green: #52ffa8;
+    --text-light: #cee3e9;
+    --text-muted: #52ffa8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-bg);
+    font-family: "Manrope", sans-serif;
+    color: var(--text-light);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.advice-id {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.advice-text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: #4f5d74;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn {
+    background-color: var(--neon-green);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+.btn svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--dark-bg);
+}
+
+.voice-btn {
+    background-color: transparent;
+    border: 2px solid var(--neon-green);
+    color: var(--neon-green);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.voice-btn:hover {
+    background-color: var(--neon-green);
+    color: var(--dark-bg);
+}
