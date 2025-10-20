@@ -33,15 +33,16 @@ const onBtnNewAdviceClick = () => {
             speak(advice);
         })
         .catch(error => {
-            console.log("Error getting new advice:", error);
+            console.error("Error getting new advice:", error);
             document.getElementById('advice-text').textContent = "Error getting new advice";
         });
 };
 
 const onBtnVoiceClick = () => {
     const text = document.getElementById("advice-text").textContent.trim();
-    if (!text) return;
-
+    if (!text) { 
+        return;
+    }    
     speak(text);
 };
 
