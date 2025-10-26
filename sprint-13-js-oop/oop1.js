@@ -5,10 +5,11 @@ class Masina {
         this.culoare = culoare;
         this.kilometraj = kilometraj;
     }
-}
 
-getProprietati() {
-     return `Masina [marca=${this.marca}, model=${this.model}, culoare=${this.culoare}, kilometraj=${this.kilometraj}]`;
+    getProprietati() {
+        return `Masina [marca=${this.marca}, model=${this.model}, culoare=${this.culoare}, kilometraj=${this.kilometraj}]`;
+    }
+    
 }
 
 function main () {
@@ -16,7 +17,9 @@ function main () {
     const masina2 = new Masina("Mazda", "CX-5", "Verde", "111 000");
     const masina3 = new Masina("Dacia", "BIGGSTER", "Albastru", "20 000");
 
-    console.log(masina1.getProprietati);
-    console.log(masina2.getProprietati);
-    console.log(masina3.getProprietati);
+    console.log(masina1.getProprietati());
+    console.log(masina2.getProprietati());
+    console.log(masina3.getProprietati());
 }
+
+main();
