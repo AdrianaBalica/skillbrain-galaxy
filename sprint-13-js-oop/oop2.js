@@ -11,10 +11,10 @@ class Masina {
     }
 }
 
-function main () {
-    const masina1 = new Masina("Volvo", "XC-60", "Negru", "234 000");
-    const masina2 = new Masina("Mazda", "CX-5", "Verde", "111 000");
-    const masina3 = new Masina("Dacia", "BIGGSTER", "Albastru", "20 000");
+function main() {
+    const masina1 = new Masina("Volvo", "XC-60", "Negru", 234_000);
+    const masina2 = new Masina("Mazda", "CX-5", "Verde", 111_000);
+    const masina3 = new Masina("Dacia", "BIGGSTER", "Albastru", 20_000);
 
     console.log(masina1.getProprietati());
     console.log(masina2.getProprietati());
@@ -22,8 +22,10 @@ function main () {
 }
 
 class MasinaDeCurse extends Masina {
-    constructor(marca, model, culoare, kilometraj) {
+    constructor(marca, model, culoare, kilometraj, vitezaMaxima, echipa) {
         super(marca, model, culoare, kilometraj);
+        this.vitezaMaxima = vitezaMaxima;
+        this.echipa = echipa;
     }
 
     participaLaCampionat(pozitiaInCampionat) {
@@ -36,8 +38,8 @@ class MasinaDeCurse extends Masina {
 }
 
 function mainMasinaDeCurse() {
-    const m1 = new MasinaDeCurse("Ferrari", "F40", "Rosu", "50 000");
-    const m2 = new MasinaDeCurse("Lamborghini", "Huracan", "Galben", "30 000");
+    const m1 = new MasinaDeCurse("Ferrari", "F40", "Rosu", 50_000, 340, "Scuderia Ferrari");
+    const m2 = new MasinaDeCurse("Lamborghini", "Huracan", "Galben", 30_000, 325, "Team Lambo");
 
     console.log(m1.getProprietati());
     m1.participaLaCampionat(2);
