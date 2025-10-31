@@ -7,7 +7,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let crewIndex = 0;
     let techIndex = 0;
 
-    // Rate-limited fetch function
     function rateLimitedFetch(url, interval = 1000) {
         let lastCall = 0;
         return function () {
@@ -68,7 +67,6 @@ window.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => renderPlanet(btn.dataset.planet));
     });
 
-    // Home Section
     function renderHome() {
         const container = document.createElement('div');
         container.classList.add('fade-in');
@@ -96,7 +94,6 @@ window.addEventListener('DOMContentLoaded', () => {
         content.appendChild(container);
     }
 
-    // Destination Section
     function renderPlanet(name) {
         const planet = data.destinations.find(p => p.name === name);
         if (!planet) return;
@@ -128,7 +125,6 @@ window.addEventListener('DOMContentLoaded', () => {
         destinationTabs.querySelector(`button[data-planet='${name}']`).classList.add('active');
     }
 
-    // Crew Section
     function renderCrew() {
         const member = data.crew[crewIndex];
         content.textContent = '';
