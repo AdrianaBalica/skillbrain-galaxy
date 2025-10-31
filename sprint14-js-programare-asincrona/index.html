@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Tourism</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Barlow+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="home">
+  <header>
+    <nav class="main-nav">
+      <div class="nav-left">
+        <a href="index.html">
+          <img src="assets/shared/logo.svg" alt="logo" class="logo"/>
+        </a>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><button data-section="home" class="active"><span>00</span> Home</button></li>
+          <li><button data-section="destination"><span>01</span> Destination</button></li>
+          <li><button data-section="crew"><span>02</span> Crew</button></li>
+          <li><button data-section="technology"><span>03</span> Technology</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="destination-tabs" class="tabs hidden">
+    <button data-planet="Moon" class="active">Moon</button>
+    <button data-planet="Mars">Mars</button>
+    <button data-planet="Europa">Europa</button>
+    <button data-planet="Titan">Titan</button>
+  </section>
+
+  <main id="content"></main>
+
+  <script src="app.js"></script>
+</body>
+</html>
