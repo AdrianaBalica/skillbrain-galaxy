@@ -270,6 +270,7 @@ p {
     img {
         width: 200px;
     }
+
     body.home {
         background-image: url('assets/home/background-home-mobile.jpg');
         min-height: 100vh;
