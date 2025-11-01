@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function rateLimitedFetch(url, interval = 1000) {
         let lastCall = 0;
-        return function () {
+        return function() {
             const now = Date.now();
             if (now - lastCall >= interval) {
                 lastCall = now;
