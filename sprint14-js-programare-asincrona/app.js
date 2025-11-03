@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         return res.json();
                     });
             } else {
-                return Promise.reject(new Error('Request blocat: prea rapid'));
+                return Promise.reject(new Error('Too many requests: please wait'));
             }
         };
     }
@@ -207,4 +207,3 @@ window.addEventListener('DOMContentLoaded', () => {
         content.appendChild(container);
     }
 });
-
