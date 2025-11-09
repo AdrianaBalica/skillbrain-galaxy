@@ -29,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     fetchData()
         .then(json => {
             data = json;
+            generatePlanetTabs();
             renderSection('home');
         })
         .catch(err => {
@@ -40,6 +41,23 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.className = section;
     }
 
+    function generatePlanetTabs() {
+        destinationTabs.innerHTML = '';
+    
+        data.destinations.forEach((planet, index) => {
+          const btn = document.createElement('button');
+          btn.textContent = planet.name;
+          btn.dataset.planet = planet.name;
+          if (index === 0) btn.classList.add('active');
+    
+          btn.addEventListener('click', () => {
+            renderPlanet(planet.name);
+          });
+    
+          destinationTabs.appendChild(btn);
+        });
+      }
+
     function renderSection(section) {
         content.textContent = '';
         destinationTabs.classList.add('hidden');
@@ -49,7 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
             case 'home': renderHome(); break;
             case 'destination':
                 destinationTabs.classList.remove('hidden');
-                renderPlanet('Moon');
+                renderPlanet(data.destinations[0].name);
                 break;
             case 'crew': renderCrew(); break;
             case 'technology': renderTechnology(); break;
@@ -76,9 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
         h1.textContent = "So, you want to travel to";
         const span = document.createElement('span');
         span.textContent = 'SPACE';
-        span.style.display = 'block';
-        span.style.fontSize = '5rem';
-        span.style.fontFamily = 'Bellefair';
+        span.classList.add('space-text');
         h1.appendChild(span);
 
         const p = document.createElement('p');
