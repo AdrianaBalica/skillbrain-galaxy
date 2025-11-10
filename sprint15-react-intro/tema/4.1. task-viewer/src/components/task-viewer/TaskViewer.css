@@ -4,8 +4,7 @@
     padding: 40px;
     width: 100%;
     min-height: 400px;
-  
- display: flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 32px;
     justify-content: flex-start;

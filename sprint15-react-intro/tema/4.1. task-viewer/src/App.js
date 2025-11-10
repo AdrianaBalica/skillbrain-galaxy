@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-      <h1>Task Manager</h1>
+        <h1>Task Manager</h1>
       </header>
       <TaskViewer data={data} />
     </div>
