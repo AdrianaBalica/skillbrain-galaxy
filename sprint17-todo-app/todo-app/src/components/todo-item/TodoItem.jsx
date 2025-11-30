@@ -3,33 +3,31 @@ import "./TodoItem.css";
 import CheckBox from "../checkbox/CheckBox";
 
 const TodoItem = (props) => {
-    const handleCheckboxChange = (value) => {
-        console.log(value);
-    };
+    const { id, title, description, completed, onToggle, onDelete, onEdit } = props;
 
     return (
-        <div className={`todo-item ${props.completed && "todo-completed"}`}>
+        <div className={`todo-item ${completed && "todo-completed"}`}>
             <div className="todo-item-header">
                 <div className="title-area">
                     <CheckBox
-                        checked={!!props.completed}
-                        onChange={handleCheckboxChange}
+                        checked={completed}
+                        onChange={() => onToggle(id)}
                     />
-
-                    <h4>Assignment 1</h4>
+                    <h4>{title}</h4>
                 </div>
-                <div>
-                    <i className="fa fa-pencil" aria-hidden="true"></i>
-                    <i className="fa fa-trash" aria-hidden="true"></i>
+                <div className="todo-actions">
+                    <button className="edit-btn" onClick={onEdit}>
+                        ✏️
+                    </button>
+                    <button className="delete-btn" onClick={() => onDelete(id)}>
+                        <i className="fa fa-trash" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
 
             <div className="separator"></div>
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At id illo
-                repellendus non maiores in pariatur aliquam iure fugit amet!
-            </p>
+            <p>{description}</p>
         </div>
     );
 };
