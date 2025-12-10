@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Learn React by implementing a **Todo App** alongside your Frontend mentor as a part of the React course from SkillBrain©.
 
-## Available Scripts
+Building a Todo App is easy and does not take much time, but it teaches you some important concepts which are very important for any developer.
 
-In the project directory, you can run:
+Check the docs below before proceeding to your task 👉🏻 Git Helper, Project Setup and Rules.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Since these are your first weeks with React, we will keep things simple. The starting code already includes the core components and styles—the building blocks you will need to implement this task.
 
-### `npm test`
+Make sure you understand the role of these components as you are going to use them in your implementation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+.
+├── node_modules
+├── README.md
+├── public
+├── package-lock.json
+├── package.json
+└── src
+    ├── reportWebVitals.js
+    ├── App.css
+    ├── index.js
+    ├── index.css
+    ├── components // 👈🏻 here are the core components.
+    │   ├── card
+    │   ├── todo-item
+    │   ├── input
+    │   ├── checkbox
+    │   ├── button
+    │   ├── add-todo
+    │   └── modal
+    └── App.jsx // 👈🏻 here is the starting point.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Task Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+💡 The requirements of the task as well as a description of the project structure can be found in the accompanying video.
 
-### `npm run eject`
+In software development, a **user story** is an actionable goal from the perspective of the user. Defining user stories before you begin your work will help you focus your effort.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ✅ User Stories
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1️⃣ View all todos in two separate lists: active and completed ⭐️
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Use a state to store your todos. Initialize it from the `TODOS_MOCK` array found in `App.js`.
+- Display the todos from your state with the `<TodoItem />` component.
+- Initially, the information displayed by `<TodoItem />` is static.
+- Make this component reusable and pass the displayed data dynamically through props.
+- We added one prop for you: `completed`, which is responsible for styling completed vs active items.
+- Display todos in two separate lists depending on the `completed` value.
 
-## Learn More
+**Hint:** Use JavaScript array methods `map()` and `filter()` to display and separate todos.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2️⃣ Add todos ⭐️
 
-### Code Splitting
+- Implement a form to add todos.
+- Update the form state on input change.
+- Handle form submit to add the new item to the todo list.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### 2.1 Modal Form ⭐️
 
-### Analyzing the Bundle Size
+- The form will be displayed inside the `Modal` component (`src/components/modal/Modal.jsx`).
+- Clicking on the **ADD +** button will open the modal.
+- Add a state to control the modal (open/close).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### 3️⃣ Mark todo as complete/done ⭐️⭐️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- By checking/unchecking the checkbox, the todo item will update its status.
+- Completed todos will move to the completed list, and active todos will remain in the active list.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 4️⃣ Delete any task ⭐️
 
-### Deployment
+- Clicking on the delete icon will remove the corresponding item.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+### 5️⃣ Edit any task ⭐️⭐️⭐️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Clicking on the edit icon will open the modal and prefill the form fields with the corresponding data.
+- User can edit the fields and submit the form.
+- The todo item will be updated with the new data.
